@@ -10,7 +10,7 @@ createMatchResultsFile <- function(eventKey) {
     blue <- data$alliances$blue$team_keys[i]
     blue <- gsub("\"|frc|c|\\(|\\)", "", blue)
     l <- paste(gsub(paste(eventKey,"_", sep = ""),"",data$key[i]), red, blue, data$alliances$red$score[i], data$alliances$blue$score[i],
-               d$winning_alliance[i], sep = ", ")
+               data$winning_alliance[i], sep = ", ")
     l <- paste(l, "\n", sep = "")
     cat(l)
   }
